@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30104.148
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "react-enabled-aspdotnet-hi-world", "react-enabled-aspdotnet-hi-world.csproj", "{0278F62F-D766-4FEF-9610-4851D4850D52}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{0278F62F-D766-4FEF-9610-4851D4850D52}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0278F62F-D766-4FEF-9610-4851D4850D52}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0278F62F-D766-4FEF-9610-4851D4850D52}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0278F62F-D766-4FEF-9610-4851D4850D52}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {78658641-DB6E-4F0F-BC84-F4F98C513F82}
+	EndGlobalSection
+EndGlobal
