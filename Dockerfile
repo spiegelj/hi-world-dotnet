@@ -26,3 +26,21 @@ COPY --from=publish /app/publish .
 ENTRYPOINT ["dotnet", "react-enabled-aspdotnet-hi-world.dll", "--host", "0.0.0.0"]
 # I'm probably getting this a bit wrong, but the IPs the browser will lead to aren't the same as what docker is using within the container.
 # the host and 0.0.0.0 "parameters" tell docker to map the IPs as needed.  https://pythonspeed.com/articles/docker-connection-refused/ clued me in.
+
+#FROM mcr.microsoft.com/dotnet/core/sdk:3.1 AS build-env
+#WORKDIR /app
+#
+## Copy csproj and restore as distinct layers
+#COPY *.csproj ./
+#RUN dotnet restore
+#
+## Copy everything else and build
+#COPY . ./
+#RUN dotnet publish -c Release -o out
+#
+## Build runtime image
+#FROM mcr.microsoft.com/dotnet/core/aspnet:3.1
+#WORKDIR /app
+#COPY --from=build-env /app/out .
+#ENTRYPOINT ["dotnet", "react-enabled-aspdotnet-hi-world.dll"]
+#
