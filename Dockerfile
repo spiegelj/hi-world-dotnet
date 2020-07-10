@@ -15,6 +15,13 @@ COPY ["react-enabled-aspdotnet-hi-world.csproj", ""]
 RUN dotnet restore "./react-enabled-aspdotnet-hi-world.csproj"
 COPY . .
 WORKDIR "/src/."
+
+# following lines pointed to by stackoverflow...appears nodejs needs specific inclusion???
+RUN apt-get update -yq && apt-get upgrade -yq && apt-get install -yq curl git nano
+RUN curl -sL https://deb.nodesource.com/setup_8.x | bash - && apt-get install -yq nodejs build-essential
+RUN npm install -g npm
+RUN npm install
+
 RUN dotnet build "react-enabled-aspdotnet-hi-world.csproj" -c Release -o /app/build
 
 FROM build AS publish
